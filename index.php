@@ -43,36 +43,37 @@
                             <div class="name-area col-2">
                                 <div class="first-name">
                                     <label for="fname">First Name</label>
-                                    <input type="text" id="fname" name="fname">
+                                    <input type="text" id="fname" name="fname" require>
                                 </div>
                                 <div class="last-name">
                                     <label for="lname">Last Name</label>
-                                    <input type="text" id="lname" name="lname">
+                                    <input type="text" id="lname" name="lname" require>
                                 </div>
                             </div>
                             <div class="email-age col-2">
                                 <div class="email-area">
                                     <label for="email">Email Address</label>
-                                    <input type="email" id="email" name="email">
+                                    <input type="email" id="email" name="email" require>
                                 </div>
                                 <div class="age-area">
                                     <label for="age">Age</label>
-                                    <input type="number" id="age" name="age">
+                                    <input type="number" id="age" name="age" require>
                                 </div>
                             </div>
                             <div class="gender">
                                 <div class="male">
                                     <label for="male">Male</label>
-                                    <input type="radio" name="gender" value="male">
+                                    <input type="radio" name="gender" value="male" require>
                                 </div>
                                 <div class="female">
                                     <label for="female">Female</label>
-                                    <input type="radio" name="gender" value="female">
+                                    <input type="radio" name="gender" value="female" require>
                                 </div>
                             </div>
                             <div class="country">
                                 <label for="country">Country</label>
-                                <select name="country" id="country">
+                                <select name="country" id="country" require>
+                                    <option value="">Select Your Country</option>
                                     <option value="Bangladesh">Bangladesh</option>
                                     <option value="India">India</option>
                                     <option value="Pakistan">Pakistan</option>
@@ -81,6 +82,7 @@
                             </div>
                             <input type="submit" value="Save Data" id="add-data">
                         </form>
+                        <div id="response"></div>
                     </div>
                 </div>
             </div>
