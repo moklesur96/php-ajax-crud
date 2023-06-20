@@ -157,3 +157,29 @@ input[type=submit] {
     border-left: 5px solid red;
     display: none;
 }
+
+/* Pagination css 
+ */
+
+.pagination {
+    display: inline-block;
+    margin-top: 24px;
+}
+
+.pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+.pagination a.active {
+    background-color: #154DA1;
+    color: white;
+    border-radius: 5px;
+}
+
+.pagination a:hover:not(.active) {
+    background-color: #ddd;
+    border-radius: 5px;
+}

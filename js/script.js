@@ -1,15 +1,25 @@
 $(document).ready(function () {
-    function loadData() {
+    function loadData(page) {
         $.ajax({
             url: 'load-data.php',
             type: 'POST',
+            data: { page_id: page },
             success: function (data) {
-                $('.student-data table').html(data);
+                $('.student-data').html(data);
             }
         })
+
     }
 
+    // PAGINATION BUTTON CLICK
+    $(document).on('click', '.pagination a', function (e) {
+        e.preventDefault();
+        var pageId = $(this).attr('id');
+        loadData(pageId);
+    })
+
     loadData();
+
 
     $('#add-data').click(function (e) {
         e.preventDefault();
@@ -48,4 +58,5 @@ $(document).ready(function () {
 
 
     })
+
 })

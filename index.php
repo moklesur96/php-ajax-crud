@@ -35,9 +35,7 @@
         <section class="data-area">
             <div class="container">
                 <div class="data-wrap">
-                    <div class="student-data">
-                        <table id="customers"></table>
-                    </div>
+                    <div class="student-data"></div>
                     <div class="add-data">
                         <form action="" id="submit-form">
                             <div class="name-area col-2">
