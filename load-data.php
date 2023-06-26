@@ -14,7 +14,7 @@ if (isset($_POST['page_id'])) {
 $offset = ($page - 1) * $limit_per_page;
 
 // Load Data
-$query = "SELECT * FROM students LIMIT $offset, $limit_per_page";
+$query = "SELECT * FROM students ORDER BY id DESC LIMIT $offset, $limit_per_page";
 $get_query = mysqli_query($connDB, $query);
 
 $output = "<table id='customers'>";

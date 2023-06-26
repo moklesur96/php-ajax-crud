@@ -59,4 +59,24 @@ $(document).ready(function () {
 
     })
 
+    // search event
+    $('.search input').keyup(function () {
+        var keyTerm = $(this).val();
+        console.log(keyTerm)
+
+        if (keyTerm != '') {
+            $.ajax({
+                url: 'live-search.php',
+                type: 'POST',
+                data: { searchKey: keyTerm },
+                success: function (data) {
+                    $('.student-data').html(data);
+                }
+            })
+        } else {
+            loadData();
+        }
+
+    })
+
 })
